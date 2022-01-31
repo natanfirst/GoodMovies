@@ -48,8 +48,8 @@ const Header: React.FC = () => {
             <S.Logo Color="#F00">Good</S.Logo>
             Movies
           </S.Logo>
-          {navigation.map((item) => (
-            <S.ListNavigation>
+          {navigation.map((item, index) => (
+            <S.ListNavigation key={index}>
               <S.LinksNavigation>{item.routeName}</S.LinksNavigation>
               {item.routeName === "Pages" ? <IoIosArrowDown /> : ""}
             </S.ListNavigation>
